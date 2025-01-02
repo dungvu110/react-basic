@@ -1,5 +1,4 @@
 import React from "react";
-import ChildComponent from "./ChildComponent";
 
 /**
  * JSX -> tra ve 1 khoi html
@@ -10,7 +9,6 @@ import ChildComponent from "./ChildComponent";
  * 
  * su dung js trong html voi {}
  */
-
 
 class MyComponent extends React.Component {
 
@@ -57,8 +55,6 @@ class MyComponent extends React.Component {
                         Click me!
                     </button>
                 </div>
-                <ChildComponent name={'child1'}></ChildComponent>
-                <ChildComponent name={'child2'}></ChildComponent>
             </>
         )
     }

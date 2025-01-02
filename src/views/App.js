@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './Example/MyComponent';
-import MyFormComponent from './Example/MyFormComponent';
+import MyNewComponent from './Example/MyNewComponent';
 
 /**
  * 2 components class / function (arrow) 
@@ -16,8 +15,7 @@ function App() {
         <p>
           Hello World with React
         </p>
-        <MyComponent></MyComponent>
-        <MyFormComponent></MyFormComponent>
+        <MyNewComponent />
       </header>
     </div>
   );
