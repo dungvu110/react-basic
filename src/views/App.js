@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent';
+import MyFormComponent from './Example/MyFormComponent';
 
 /**
  * 2 components class / function (arrow) 
@@ -15,15 +16,8 @@ function App() {
         <p>
           Hello World with React
         </p>
-        <a
-          className="App-link"
-          href="https://react.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <MyComponent></MyComponent>
+        <MyFormComponent></MyFormComponent>
       </header>
     </div>
   );

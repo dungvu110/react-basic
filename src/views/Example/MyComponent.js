@@ -1,4 +1,5 @@
 import React from "react";
+import ChildComponent from "./ChildComponent";
 
 /**
  * JSX -> tra ve 1 khoi html
@@ -43,7 +44,7 @@ class MyComponent extends React.Component {
                         My name is {name}
                     </div>
                     <div>
-                        Mne zavut {this.state.name1}, ili {this.state["name2"]}
+                        Mne zovut {this.state.name1}, ili {this.state["name2"]}
                     </div>
                     <div>
                         <input value={this.state.namex} type="text"
@@ -56,6 +57,8 @@ class MyComponent extends React.Component {
                         Click me!
                     </button>
                 </div>
+                <ChildComponent name={'child1'}></ChildComponent>
+                <ChildComponent name={'child2'}></ChildComponent>
             </>
         )
     }
