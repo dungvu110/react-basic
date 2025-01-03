@@ -1,4 +1,6 @@
 import React from "react";
+import './Demo.scss';
+
 /**
  * used through another component
  * truyen theo props tu tren xuong duoi
@@ -7,7 +9,7 @@ import React from "react";
 class ChildComponent extends React.Component {       //class (stateful) component
 
     state = {
-        showJobs: false,
+        showJobs: true,
     }
 
     handleShowJobs = () => {
@@ -22,6 +24,10 @@ class ChildComponent extends React.Component {       //class (stateful) componen
         })
     }
 
+    handleDeleteJob = (job) => {
+        this.props.deleteAJob(job)
+    }
+
     render() {
 
         let { arrJobs } = this.props;  //chi su dung duoc khi ten bien = ten key cua object
@@ -30,24 +36,25 @@ class ChildComponent extends React.Component {       //class (stateful) componen
 
         return (
             <>
-                {/* conditional output, show/hide buttons */}
+                {/* conditional output, show/hide buttons abc?x:y */}
                 {!showJobs ?
                     <div><button onClick={() => this.handleShowJobs()}>Show</button></div>
                     :
                     <>
-                        <div><button onClick={() => this.handleHideJobs()}>Hide</button></div>
                         <div className="job-lists">
                             {
                                 //ham lap map
                                 arrJobs.map((item, index) => {
                                     return (
                                         <div key={item.id}>
-                                            {item.title} - ${item.salary}
+                                            {item.title} - ${item.salary} <></>
+                                            <button onClick={() => this.handleDeleteJob(item)}>x</button>
                                         </div>
                                     )
                                 })
                             }
                         </div>
+                        <div><button onClick={() => this.handleHideJobs()}>Hide</button></div>
                     </>
                 }
             </>
