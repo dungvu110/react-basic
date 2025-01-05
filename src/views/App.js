@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyNewComponent from './Example/MyNewComponent';
+import ListTodo from './Todos/ListTodo';
 
 /**
  * 2 components class / function (arrow) 
@@ -13,9 +13,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello World with React
+          Simple TODO apps with React
         </p>
-        <MyNewComponent />
+        <ListTodo />
       </header>
     </div>
   );
