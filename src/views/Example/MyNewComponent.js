@@ -51,10 +51,12 @@ class MyNewComponent extends React.Component {
         console.log(">> CALL RENDER:", this.state)
         return (
             <>
+                <p>
+                    Getting started with React
+                </p>
                 <AddComponent
                     addNewJob={this.addNewJob}
                 />
-
                 <ChildComponent
                     arrJobs={this.state.arrJobs}
                     deleteAJob={this.deleteAJob}
