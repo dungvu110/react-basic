@@ -7,6 +7,9 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import Nav from './Nav/Nav.js';
 import Home from './Example/Home.js';
 
+import ListUser from './Users/ListUser.js';
+import DetailUser from './Users/DetailUser.js';
+
 /**
  * 2 components class / function (arrow) 
  * JSX
@@ -28,7 +31,13 @@ function App() {
               <ListTodo />
             </Route>
             <Route path='/about'>
-              <MyNewComponent></MyNewComponent>
+              <MyNewComponent />
+            </Route>
+            <Route path='/user' exact>
+              <ListUser />
+            </Route>
+            <Route path='/user/:id'>
+              <DetailUser />
             </Route>
           </Switch>
 
