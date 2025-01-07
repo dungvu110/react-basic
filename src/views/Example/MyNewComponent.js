@@ -41,14 +41,14 @@ class MyNewComponent extends React.Component {
     }
 
     componentDidMount() {
-        console.log(">> run component did mount")
+        // console.log(">> run component did mount")
     }
     componentDidUpdate(prevProps, prevState) {
-        console.log(">> run component did upadate", "previous state:", prevState, "current state:", this.state)
+        // console.log(">> run component did upadate", "previous state:", prevState, "current state:", this.state)
     }
 
     render() {
-        console.log(">> CALL RENDER:", this.state)
+        // console.log(">> CALL RENDER:", this.state)
         return (
             <>
                 <p>

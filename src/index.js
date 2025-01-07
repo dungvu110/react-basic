@@ -6,11 +6,16 @@ import "./styles/global.scss";
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import rootReducer from './reducers';
+import rootReducer from './store/reducers/rootReducer.js';
+
+const reduxStore = createStore(rootReducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* su dung Provider, ep redux khoi dong song song react */}
+    <Provider store={reduxStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
