@@ -48,7 +48,7 @@ class ChildComponent extends React.Component {       //class (stateful) componen
                                     return (
                                         <div key={item.id}>
                                             {item.title} - ${item.salary} <></>
-                                            <button onClick={() => this.handleDeleteJob(item)}>x</button>
+                                            <button type="button" onClick={() => this.handleDeleteJob(item)}>x</button>
                                         </div>
                                     )
                                 })
